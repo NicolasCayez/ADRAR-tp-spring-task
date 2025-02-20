@@ -23,7 +23,7 @@ public class Task {
   private Date date;
   private boolean status;
   @ManyToMany
-  @JoinTable(name = "completing",
+  @JoinTable(name = "tasks_categories",
                     joinColumns = @JoinColumn(name = "task_id"),
                     inverseJoinColumns = @JoinColumn(name = "category_id"))
   private List<Category> categories = new ArrayList<>();

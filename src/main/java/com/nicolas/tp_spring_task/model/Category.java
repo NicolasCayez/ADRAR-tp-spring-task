@@ -21,7 +21,7 @@ public class Category {
   @Column(name = "label")
   private String label;
   @ManyToMany
-  @JoinTable(name = "completing",
+  @JoinTable(name = "tasks_categories",
                     joinColumns = @JoinColumn(name = "category_id"),
                     inverseJoinColumns = @JoinColumn(name = "task_id"))
   private List<Task> tasks = new ArrayList<>();
